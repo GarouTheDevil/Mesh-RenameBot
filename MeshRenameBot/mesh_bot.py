@@ -39,4 +39,4 @@ class MeshRenameBot(Client):
             try:
                 await self.send_message(track_channel, text_mess)
             except:
-                renamelog.exception("Make Sure to enter the Track Channel ID correctly.")
+                renamelog.exception("Enter The Track Channel ID Correctly")
