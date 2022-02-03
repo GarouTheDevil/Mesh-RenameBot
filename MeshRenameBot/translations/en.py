@@ -12,7 +12,7 @@ class EnTrans:
 
     RENAME_NOFLTR_NONAME = "**Enter The Rename File Name In Format :** ```/rename NewFileName.format``` or ```Use /filters To Set Some Rename Filters```"
 
-    RENAME_CANCEL = "**CANCEL**"
+    RENAME_CANCEL = "CANCEL"
 
     RENAMING_FILE = "**Renaming ⏳**"
     
