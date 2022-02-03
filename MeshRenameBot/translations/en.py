@@ -1,20 +1,20 @@
 class EnTrans:
     
-    WRONG_VALUE_ERROR = "Invalid Value Entered For {} Variable"
+    WRONG_VALUE_ERROR = "**Invalid Value Entered For** {} **Variable**"
     
-    START_MSG = "Hello , I Am A Rename Bot"
+    START_MSG = "**Hello , I Am A Rename Bot**"
      
-    CANCEL_MESSAGE = "The Rename Has Been Canceled"
+    CANCEL_MESSAGE = "**The Rename Has Been Canceled**"
     
-    RENAME_NO_FILTER_MATCH = "No Filter Matched Aborting Rename \nUsing The Filters To Rename As No Name Was Specified Manage Your Filters Using Cammand : /filters"
+    RENAME_NO_FILTER_MATCH = "**No Filter Matched Aborting Rename \nUsing The Filters To Rename As No Name Was Specified Manage Your Filters Using Cammand :** /filters"
 
-    RENAME_FILTER_MATCH_USED = "Using The Filters To Rename As No Name Was Specified Manage Your Filters Using /filters"
+    RENAME_FILTER_MATCH_USED = "**Using The Filters To Rename As No Name Was Specified Manage Your Filters Using** /filters"
 
-    RENAME_NOFLTR_NONAME = "Enter The Rename File Name In Format :- ```/rename NewFileName.format``` or ```Use /filters To Set Some Rename filters```"
+    RENAME_NOFLTR_NONAME = "**Enter The Rename File Name In Format :** ```/rename NewFileName.format``` or ```Use /filters To Set Some Rename Filters```"
 
     RENAME_CANCEL = "**CANCEL**"
 
-    RENAMING_FILE = "**Renaming..⏳**"
+    RENAMING_FILE = "**Renaming ⏳**"
     
     DL_RENAMING_FILE = "**Downloading ⬇️**"
 
