@@ -59,9 +59,7 @@ async def rename_handler(client: Client, msg: Message) -> None:
     
     file_id = await client.get_file_id(rep_msg)
     if file_id is not None:
-        rmsg = f"""Added the Rename to queue.
-        DC ID   :- {file_id.dc_id}
-        Media ID:- {file_id.media_id}
+        rmsg = f"""**Added the Rename to Queue**
         """
         await msg.reply_text(rmsg)
     
@@ -109,7 +107,7 @@ async def handle_queue(client: Client, msg: Message) -> None:
             if i.is_executing:
                 fmsg += f"Your Task Is Executing\nTask Unique Number {i._unique_id}\n\n"
             if i.is_pending:
-                fmsg += f"Your Task Number in Queue: {j}\nTask Unique Number {i._unique_id}\n\n"
+                fmsg += f"Your Task Number In Queue : {j}\nTask Unique Number {i._unique_id}\n\n"
         
         if i.is_pending:
             j += 1
@@ -121,20 +119,20 @@ async def intercept_handler(client: Client, msg: Message) -> None:
         try:
             user_state = await client.get_chat_member(get_var("FORCEJOIN_ID"), msg.from_user.id)
             if user_state.status == "kicked":
-                await msg.reply_text("You were kicked from the chat. You can't use this bot.")
+                await msg.reply_text("**Your Banned**")
                 return
         except UserNotParticipant:
             forcejoin = get_var("FORCEJOIN")
-            await msg.reply_text("Join the given chat in order to use this bot.", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Join Updates Channel", url=f"{forcejoin}")]]),parse_mode="markdown")
+            await msg.reply_text("**Join Channel To Use Bot**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Join Updates Channel", url=f"{forcejoin}")]]),parse_mode="markdown")
             return
         except ChatAdminRequired:
-            renamelog.error("The bot is not the admin in the chat make it admin first.")
+            renamelog.error("**Get The Access First**")
             return
         except UsernameNotOccupied:
-            renamelog.error("Invalid FORCEJOIN ID can find that chat.")
+            renamelog.error("**Invalid Join Channel ID**")
             return
         except:
-            renamelog.exception("The ID should be of the channel/ group that you want the user to join.")
+            renamelog.exception("**The ID Is Not Good**")
             return
 
     await msg.continue_propagation()
