@@ -38,7 +38,7 @@ class EnTrans:
 Given Word With The One You Specified
 • Addition Filter : This Filter Will Add Given Word
 At End Or Beginning
-•Remove Filter : This Filter Will Remove Given Word
+• Remove Filter : This Filter Will Remove Given Word
 From The While File Name</b>
 
 """
