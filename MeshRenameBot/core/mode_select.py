@@ -16,18 +16,18 @@ async def upload_mode(client: Client, msg: Message ) -> None:
     msg_str =""
 
     if modee == UserDB.MODE_SAME_AS_SENT:
-        msg_str += "➡️ "
+        msg_str += "✓ "
     
-    msg_str += "1. MODE to the same format as it was sent.\n"    
+    msg_str += " - 1 • MODE To The Same Format As It Was Sent \n"    
     if modee == UserDB.MODE_AS_DOCUMENT:
-        msg_str += "➡️ "
+        msg_str += "✓ "
     
-    msg_str += "2. MODE Forced Document.\n"
+    msg_str += " - 2 • MODE Forced Document \n"
     
     if modee == UserDB.MODE_AS_GMEDIA:
-        msg_str += "➡️ "
+        msg_str += "✓ "
     
-    msg_str += "3. Mode General Media."
+    msg_str += "- 3 • Mode General Media "
 
     markup = InlineKeyboardMarkup(
         [
@@ -54,18 +54,18 @@ async def mode_callback(client, msg: MessageEntity):
     msg_str =""
 
     if smode == UserDB.MODE_SAME_AS_SENT:
-        msg_str += "➡️ "
+        msg_str += "✓ "
     
-    msg_str += "1. MODE to the same format as it was sent.\n"    
+    msg_str += " - 1 • MODE To The Same Format As Is Was Sent \n"    
     if smode == UserDB.MODE_AS_DOCUMENT:
-        msg_str += "➡️ "
+        msg_str += "✓ "
     
-    msg_str += "2. MODE Forced Document.\n"
+    msg_str += " - 2 • MODE Forced Document \n"
     
     if smode == UserDB.MODE_AS_GMEDIA:
-        msg_str += "➡️ "
+        msg_str += "✓ "
     
-    msg_str += "3. Mode General Media."
+    msg_str += " - 3 • Mode General Media "
 
     markup = InlineKeyboardMarkup(
         [
