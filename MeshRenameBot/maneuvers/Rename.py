@@ -98,7 +98,7 @@ class RenameManeuver(DefaultManeuver):
                 file_name=dl_path,
                 progress=progress_for_pyrogram, 
                 progress_args=(
-                    "Downloading the file",
+                    "Downloading ⬇️",
                     progress,
                     time.time(),
                     get_var("SLEEP_SECS"),
@@ -109,16 +109,16 @@ class RenameManeuver(DefaultManeuver):
             
             )
         except:
-            renamelog.exception("Errored while downloading the file.")
-            await progress.edit_text("Rename process errored.")
+            renamelog.exception("Errored Occurred While Downloading")
+            await progress.edit_text("Rename Process Errored")
             return
         
         if dl_path is None:
-            renamelog.info(f"Download Cancled.")
-            await progress.edit_text("Download Cancled.")
+            renamelog.info(f"Download Cancelled")
+            await progress.edit_text("Download Cancelled")
             return
         
-        renamelog.info(f"Download complete to {dl_path}")
+        renamelog.info(f"Download complete To {dl_path}")
         await asyncio.sleep(1)
 
         
@@ -147,7 +147,7 @@ class RenameManeuver(DefaultManeuver):
         
         renamelog.info(thumb_path)
         renamelog.info(f"is force = {is_force}")
-        await progress.edit_text("Downloading Done Now renaming.", reply_markup=None)        
+        await progress.edit_text("Downloaded Successfully", reply_markup=None)        
 
         try:
             ndl_path = os.path.join(os.path.dirname(dl_path), new_file_name)
@@ -260,14 +260,14 @@ class RenameManeuver(DefaultManeuver):
                     )
                 )
             if rmsg is None:
-                await progress.edit_text("Upload Cancled by the user.")
+                await progress.edit_text("Uploading Cancelled")
             else:
-                await progress.edit_text("Rename process Done.")
+                await progress.edit_text("Renamed Successfully")
             
             await asyncio.sleep(2) 
         except:
-            renamelog.exception("Errored while uplading the file.")
-            await progress.edit_text("Rename process errored.")
+            renamelog.exception("Error Occurred While Uploading")
+            await progress.edit_text("Rename Process Errored")
             return
 
         rem_this(thumb_path)
@@ -281,4 +281,4 @@ def rem_this(path):
         os.remove(path)
     except:
         print(path)
-        renamelog.exception("Errored while removeing the file.")
+        renamelog.exception("Errored While Renaming")
