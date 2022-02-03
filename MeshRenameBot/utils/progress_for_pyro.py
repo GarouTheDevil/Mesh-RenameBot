@@ -44,11 +44,11 @@ async def progress_for_pyrogram(
         estimated_total_time = human_readable_timedelta(estimated_total_time)
 
         progress = "[{0}{1}] \nP: {2}%\n".format(
-            ''.join([get_var("COMPLETED_STR") for _ in range(math.floor(percentage / 10))]),
-            ''.join([get_var("REMAINING_STR") for _ in range(10 - math.floor(percentage / 10))]),
+            ''.join([get_var("COMPLETED_STR") for _ in range(math.floor(percentage / 5))]),
+            ''.join([get_var("REMAINING_STR") for _ in range(20 - math.floor(percentage / 5))]),
             round(percentage, 2))
 
-        tmp = progress + "{0} of {1}\nSpeed: {2}/s\nETA: {3}\n".format(
+        tmp = progress + "{0} of {1}\n **=> Speed :** {2}/s\n **=> ETA :** {3}\n".format(
             human_readable_bytes(current),
             human_readable_bytes(total),
             human_readable_bytes(speed),
