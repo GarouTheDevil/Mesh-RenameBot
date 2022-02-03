@@ -39,17 +39,17 @@ async def handle_set_thumb(client, msg):
                 UserDB().set_thumbnail(data, msg.from_user.id)
             
             os.remove(path)
-            await msg.reply_text("Thumbnail set success.", quote=True)
+            await msg.reply_text("Thumbnail Applied Successfully", quote=True)
         else:
-            await msg.reply_text("Reply to an image to set it as a thumbnail.", quote=True)
+            await msg.reply_text("Reply To A Image To Apply As Thumbnail", quote=True)
 
     else:
-        await msg.reply_text("Reply to an image to set it as a thumbnail.", quote=True)
+        await msg.reply_text("Reply To Image To Apply As Thumbnail", quote=True)
 
 async def handle_get_thumb(client, msg):
     thumb_path = UserDB().get_thumbnail(msg.from_user.id)
     if thumb_path is False:
-        await msg.reply("No Thumbnail Found.", quote=True)
+        await msg.reply("No Thumbnail Found", quote=True)
     else:
         await msg.reply_photo(thumb_path, quote=True)
         os.remove(thumb_path)
@@ -123,4 +123,4 @@ async def get_thumbnail(file_path, user_id = None, force_docs = False):
 
 async def handle_clr_thumb(client, msg):
     UserDB().set_thumbnail(None, msg.from_user.id)
-    await msg.reply_text("Thumbnail Cleared.", quote=True)
+    await msg.reply_text("Thumbnail Cleared", quote=True)
