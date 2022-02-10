@@ -47,7 +47,7 @@ At End Or Beginning
     ADD_REMOVE_FLTR = "Remove Filter"
     BACK = "BACK"
 
-    REPALCE_FILTER_INIT_MSG = "Send The Message In This Format : <code>What To Replace | What To Replace With</code> \n/ignore To Go Back \nNote : Space After And Before '|' Will Be Considered"
+    REPALCE_FILTER_INIT_MSG = "Send The Message In This Format : <code>What To Replace|What To Replace With</code> \n/ignore To Go Back"
 
     NO_INPUT_FROM_USER = "**No Input Received From You**"
     INPUT_IGNORE = "**Ignored Successfully**"
